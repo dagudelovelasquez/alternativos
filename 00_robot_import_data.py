@@ -16,7 +16,12 @@ from bs4 import BeautifulSoup
 # ------------------------------------------------------------------------------
 # Parámetros
 # Directorio principal proyecto ('./General/data')
-path = os.path.join(os.getcwd(), '../..')
+# path = os.path.join(os.getcwd(), '../..')
+
+# data
+path = os.path.join(os.getcwd(), './data')
+
+# ------------------------------------------------------------------------------
 
 # urls
 url_root = 'http://www.cmfchile.cl/institucional/mercados/entidad.php?mercado=V&rut='
@@ -165,7 +170,7 @@ for i in FONDOS:
 # ------------------------------------------------------------------------------
     file_name = rut + '_' + razon_social
     df.to_csv(
-            path + '/valor cuota/alternativos/raw/' + file_name + '.csv',
+            path + '/vc_chile/raw/' + file_name + '.csv',
             encoding='iso-8859-1'
             )
     driver.quit()
